@@ -24,7 +24,7 @@ count=0
 
 for x in harfler:
     if x=='a':
-            count+=1
+        count+=1
 
 #print("a harfinden",count,"adet var")
 
@@ -50,4 +50,5 @@ l 2
 l 2
 o 1
 '''
+
 
