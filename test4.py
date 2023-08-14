@@ -1,13 +1,13 @@
 text="hello my name is hilal"
 letters=list(text)
-count={}
+count={}  # this is an empty array for letters repeat time 
 for letter in  letters:
-    if letter in count:
+    if letter in count: #it is looks inside count array and if there have any key then it is added value one more
         count[letter]+=1
-    else :
+    else : # if array dont have kind a key than it is give a value for that key 
         count[letter]=1
 
-for letter ,n in count.items():
+for letter ,n in count.items():   #count.item is search key-value pair and take the value and repet time  
     print(letter," tekrar sayısı : ",n)
 
 '''
