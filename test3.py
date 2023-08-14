@@ -32,7 +32,7 @@ for x in harfler:
 
 
 
-new_text="hello"
+new_text="hilal"
 letters=list(new_text)
 
 for a in letters:
