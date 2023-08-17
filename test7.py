@@ -13,7 +13,7 @@ class Student:
         self.gender=gender
         sub=[self.name,self.number,self.age,self.gender]
         students.append(sub)
-     
+
     def Display(self):
          print("Students : ",self.name,self.number,self.age,self.gender)
  
@@ -21,21 +21,21 @@ class Student:
     def Search(self,number):
         self.number=number
         for nums in students:
-                if nums[1]==self.number:
-                    print(nums)
+            if nums[1]==self.number:
+               print(nums)
 
     def Delete(self,number):
         self.number=number
         for nums in students:
-                if nums[1]==self.number:
-                    students.remove(nums)
-                    print(students)
+             if nums[1]==self.number:
+                students.remove(nums)
+                print(students)
 
     def  Update(self,number,new_number):
           self.number=number
           self.new_number=new_number
           for nums in students:
-                if nums[1]==self.number:
+                if nums[1]==number:
                     nums[1]=new_number
                     print(nums)
 
@@ -45,14 +45,19 @@ s3=Student()
 s1.Add("Alex",3008,20,"Male")
 s2.Add("Helen",2045,21,"Female")
 s3.Add("Jake",1988,21,"Male")
-print(students)
+s1.Display()
+s2.Display()
+s3.Display()
 s1.Search(s3.number)
-s1.Delete(s2.number)
+s1.Delete(s3.number)
 s1.Update(s2.number,13)
 
 '''''
 output is :
-    [['Alex', 3008, 20, 'Male'], ['Helen', 2045, 21, 'Female'], ['Jake', 1988, 21, 'Male']]
+    Students :  Alex 3008 20 Male
+    Students :  Helen 2045 21 Female
+    Students :  Jake 1988 21 Male
     ['Jake', 1988, 21, 'Male']
-    [['Alex', 3008, 20, 'Male'], ['Jake', 1988, 21, 'Male']]
-
+    [['Alex', 3008, 20, 'Male'], ['Helen', 2045, 21, 'Female']]
+    ['Helen', 13, 21, 'Female']
+'''''
