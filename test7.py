@@ -20,24 +20,25 @@ class Student:
     
     def Search(self,number):
         self.number=number
+        self.student=None
         for nums in students:
             if nums[1]==self.number:
-               print(nums)
+               self.student=nums
+               #print(nums)
 
     def Delete(self,number):
         self.number=number
-        for nums in students:
-             if nums[1]==self.number:
-                students.remove(nums)
-                print(students)
+        self.Search(number)      
+        students.remove(self.student)
+        print(students)
+        
 
     def  Update(self,number,new_number):
           self.number=number
           self.new_number=new_number
-          for nums in students:
-                if nums[1]==number:
-                    nums[1]=new_number
-                    print(nums)
+          self.Search(number)
+          self.student[1]=new_number
+          print(self.student)
 
 s1=Student()
 s2=Student()
@@ -57,7 +58,7 @@ output is :
     Students :  Alex 3008 20 Male
     Students :  Helen 2045 21 Female
     Students :  Jake 1988 21 Male
-    ['Jake', 1988, 21, 'Male']
+    #['Jake', 1988, 21, 'Male']
     [['Alex', 3008, 20, 'Male'], ['Helen', 2045, 21, 'Female']]
     ['Helen', 13, 21, 'Female']
 '''''
